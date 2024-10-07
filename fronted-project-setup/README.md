@@ -1,3 +1,4 @@
+```
 frontend/
 ├── public/ # Static files like HTML, favicon, etc.
 │ └── index.html
@@ -43,3 +44,4 @@ frontend/
 ├── package.json # Dependencies and scripts
 ├── tsconfig.json # TypeScript configuration
 └── .eslintrc.json # Linter configuration
+```
