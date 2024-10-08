@@ -92,6 +92,7 @@ const baseQueryWithRefreshToken: BaseQueryFn<
   let result = await baseQuery(args, api, extraOptions);
 
   if (result?.error?.status === 401) {
+    console.log("token is expired");
     //* Send Refresh
     console.log("Sending refresh token");
 
@@ -113,7 +114,9 @@ const baseQueryWithRefreshToken: BaseQueryFn<
       );
 
       result = await baseQuery(args, api, extraOptions);
+      console.log("token generate success");
     } else {
+      console.log("logout success because unauthorized user");
       api.dispatch(logout());
     }
   }
